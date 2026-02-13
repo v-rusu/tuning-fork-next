@@ -1,0 +1,31 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages, useTranslations } from '@/i18n/utils';
+import { referenceFrequencies, getFrequencyBySlug } from '@/lib/data/frequencies';
+import { FrequencyPageIsland } from '@/components/pages/FrequencyPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  return locales.flatMap((locale) =>
+    referenceFrequencies.map((f) => ({ params: { locale, frequency: f.slug } }))
+  );
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+const { frequency: frequencySlug } = Astro.params;
+const freq = getFrequencyBySlug(frequencySlug);
+const tSeo = useTranslations(locale, 'seo');
+const title = freq
+  ? tSeo('tuningForkTitle', { frequency: String(freq.frequency) })
+  : 'Tuning Fork | TuningFork';
+---
+<BaseLayout title={`${title} | TuningFork`} locale={locale}>
+  <FrequencyPageIsland
+    client:load
+    frequencySlug={frequencySlug}
+    locale={locale}
+    messages={messages}
+  />
+</BaseLayout>

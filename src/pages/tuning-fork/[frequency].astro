@@ -1,0 +1,10 @@
+---
+import { referenceFrequencies } from '@/lib/data/frequencies';
+
+export function getStaticPaths() {
+  return referenceFrequencies.map((f) => ({ params: { frequency: f.slug } }));
+}
+
+const { frequency } = Astro.params;
+return Astro.redirect(`/tools/tuning-fork/${frequency}`, 301);
+---

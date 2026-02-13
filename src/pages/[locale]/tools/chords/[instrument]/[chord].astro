@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages } from '@/i18n/utils';
+import { guitarChords, ukuleleChords, getChordBySlug } from '@/lib/data/chords';
+import { ChordDetailPageIsland } from '@/components/pages/ChordDetailPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  const chordPaths = [
+    ...guitarChords.map((c) => ({ instrument: 'guitar', chord: c.slug })),
+    ...ukuleleChords.map((c) => ({ instrument: 'ukulele', chord: c.slug })),
+  ];
+  return locales.flatMap((locale) =>
+    chordPaths.map((p) => ({ params: { locale, instrument: p.instrument, chord: p.chord } }))
+  );
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+const { instrument: instrumentSlug, chord: chordSlug } = Astro.params;
+const chord = getChordBySlug(instrumentSlug as 'guitar' | 'ukulele', chordSlug);
+const instrumentName = instrumentSlug === 'guitar' ? 'Guitar' : 'Ukulele';
+const title = chord
+  ? `${chord.name} - ${instrumentName} Chord | TuningFork`
+  : `${instrumentName} Chord | TuningFork`;
+---
+<BaseLayout title={title} locale={locale}>
+  <ChordDetailPageIsland
+    client:load
+    instrumentSlug={instrumentSlug}
+    chordSlug={chordSlug}
+    locale={locale}
+    messages={messages}
+  />
+</BaseLayout>

@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #ddddcc;
+  --background: #111111;
+  --primary: #ffc600;
+  --secondary: #333333;
+  --accent: #ff5d55;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--background);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-200 min-h-touch min-w-touch;
+  }
+
+  .btn-primary {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-black active:bg-accent/80;
+  }
+
+  .btn-secondary {
+    @apply bg-tuner-faded text-text-primary hover:bg-tuner-faded/80 active:bg-tuner-faded/60;
+  }
+
+  .btn-outline {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-black;
+  }
+
+  .card {
+    @apply bg-tuner-card rounded-xl p-4 shadow-lg border border-tuner-faded/30;
+  }
+
+  .tuner-gauge {
+    @apply relative w-64 h-64 sm:w-80 sm:h-80;
+  }
+
+  .pitch-indicator {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+
+  .note-display {
+    @apply text-6xl sm:text-7xl font-bold tracking-tight;
+  }
+
+  .cents-display {
+    @apply text-2xl sm:text-3xl font-mono;
+  }
+
+  .string-button {
+    @apply flex items-center justify-center w-12 h-12 rounded-full border-2 font-bold text-lg transition-all duration-200;
+  }
+
+  .string-button-active {
+    @apply bg-primary-500 border-primary-500 text-white scale-110;
+  }
+
+  .string-button-inactive {
+    @apply border-tuner-faded text-text-secondary hover:border-primary-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Tuner animations */
+@keyframes pulse-in-tune {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-in-tune {
+  animation: pulse-in-tune 1s ease-in-out infinite;
+}
+
+/* Microphone button animation */
+@keyframes mic-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 198, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 198, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 198, 0, 0);
+  }
+}
+
+.mic-listening {
+  animation: mic-pulse 1.5s infinite;
+}
+
+/* Chord diagram styles */
+.chord-diagram {
+  --string-color: #999988;
+  --fret-color: #666655;
+  --finger-color: #ffc600;
+  --muted-color: #ff5d55;
+  --open-color: #999988;
+}

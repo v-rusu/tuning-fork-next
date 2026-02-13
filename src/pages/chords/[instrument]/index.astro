@@ -1,0 +1,11 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { instrument: 'guitar' } },
+    { params: { instrument: 'ukulele' } },
+  ];
+}
+
+const { instrument } = Astro.params;
+return Astro.redirect(`/tools/chords/${instrument}`, 301);
+---

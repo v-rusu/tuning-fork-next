@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { guitarChords, ukuleleChords } from '@/lib/data/chords';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  const chordPaths = [
+    ...guitarChords.map((c) => ({ instrument: 'guitar', chord: c.slug })),
+    ...ukuleleChords.map((c) => ({ instrument: 'ukulele', chord: c.slug })),
+  ];
+  return locales.flatMap((locale) =>
+    chordPaths.map((p) => ({ params: { locale, instrument: p.instrument, chord: p.chord } }))
+  );
+};
+
+const { locale, instrument, chord } = Astro.params;
+return Astro.redirect(`/${locale}/tools/chords/${instrument}/${chord}`, 301);
+---

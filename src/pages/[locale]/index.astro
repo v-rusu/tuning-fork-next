@@ -1,0 +1,198 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages, useTranslations, getLocalizedPath } from '@/i18n/utils';
+import { getFeaturedArtists, getArtistsByGenre, getAllUsedTunings } from '@/lib/data/artists';
+import { genres } from '@/lib/data/genres';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { locale: 'es' } },
+    { params: { locale: 'de' } },
+    { params: { locale: 'fr' } },
+  ];
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+const t = useTranslations(locale, 'artists');
+const tTools = useTranslations(locale, 'tools');
+const tNav = useTranslations(locale, 'nav');
+
+const featuredArtists = getFeaturedArtists(6);
+const usedTunings = getAllUsedTunings();
+---
+<BaseLayout title={`${t('title')} | TuningFork`} description={t('description')} locale={locale}>
+  <div class="container mx-auto px-4 py-6 sm:py-10">
+    <!-- Hero section -->
+    <header class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+        {t('title')}
+      </h1>
+      <p class="text-text-secondary text-lg max-w-2xl mx-auto mb-6">
+        {t('description')}
+      </p>
+      <a
+        href={getLocalizedPath('/artists', locale)}
+        class="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-black rounded-lg font-medium transition-colors"
+      >
+        {t('allArtists')}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </header>
+
+    <!-- Featured Artists -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold text-white">{t('featuredArtists')}</h2>
+        <a href={getLocalizedPath('/artists', locale)} class="text-sm text-primary-500 hover:text-primary-400">
+          {t('viewAll')}
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {featuredArtists.map((artist) => {
+          const primaryTuning = artist.primaryAppTuning?.name || artist.primaryTunings[0] || 'Standard';
+          return (
+            <a
+              href={getLocalizedPath(`/artists/${artist.slug}`, locale)}
+              class="group block bg-tuner-card rounded-lg p-4 hover:bg-tuner-faded transition-colors"
+            >
+              <div class="flex flex-col h-full">
+                <h3 class="text-lg font-semibold text-white group-hover:text-primary-500 transition-colors">
+                  {artist.name}
+                </h3>
+                {artist.band && (
+                  <p class="text-sm text-text-secondary mt-0.5">{artist.band}</p>
+                )}
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-primary-500/20 text-primary-400">
+                    {primaryTuning}
+                  </span>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-tuner-faded text-text-secondary">
+                    {artist.genre.name}
+                  </span>
+                </div>
+                <p class="mt-3 text-sm text-text-secondary line-clamp-2 flex-grow">
+                  {artist.stringGauge}
+                </p>
+                <div class="mt-3 text-xs text-text-secondary">
+                  {artist.songs.length} songs
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Browse by Genre -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-white mb-6">{t('browseByGenre')}</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {genres.map((genre) => {
+          const genreArtists = getArtistsByGenre(genre.id);
+          return (
+            <a
+              href={getLocalizedPath(`/browse/genre/${genre.slug}`, locale)}
+              class="bg-tuner-card rounded-lg p-6 hover:bg-tuner-faded transition-colors group"
+            >
+              <h3 class="text-lg font-semibold text-white group-hover:text-primary-500 transition-colors">
+                {genre.name}
+              </h3>
+              <p class="text-sm text-text-secondary mt-1">
+                {t('artistsCount', { count: genreArtists.length })}
+              </p>
+              <p class="text-xs text-text-secondary mt-2 line-clamp-2">
+                {genre.description}
+              </p>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Browse by Tuning -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-white mb-6">{t('browseByTuning')}</h2>
+      <div class="flex flex-wrap gap-3">
+        {usedTunings.map((tuning) => (
+          <a
+            href={getLocalizedPath(`/browse/tuning/${tuning.slug}`, locale)}
+            class="px-4 py-2 bg-tuner-card rounded-lg hover:bg-tuner-faded transition-colors text-text-secondary hover:text-white"
+          >
+            {tuning.name}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold text-white">{tNav('tools')}</h2>
+        <a href={getLocalizedPath('/tools', locale)} class="text-sm text-primary-500 hover:text-primary-400">
+          {t('viewAll')}
+        </a>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <!-- Tuner -->
+        <a
+          href={getLocalizedPath('/tools/tuner', locale)}
+          class="bg-tuner-card rounded-lg p-5 hover:bg-tuner-faded transition-colors group"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white group-hover:text-primary-500 transition-colors">
+              {tTools('tuner')}
+            </h3>
+          </div>
+          <p class="text-sm text-text-secondary">{tTools('tunerDesc')}</p>
+        </a>
+
+        <!-- Tuning Fork -->
+        <a
+          href={getLocalizedPath('/tools/tuning-fork', locale)}
+          class="bg-tuner-card rounded-lg p-5 hover:bg-tuner-faded transition-colors group"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white group-hover:text-primary-500 transition-colors">
+              {tTools('tuningFork')}
+            </h3>
+          </div>
+          <p class="text-sm text-text-secondary">{tTools('tuningForkDesc')}</p>
+        </a>
+
+        <!-- Chords -->
+        <a
+          href={getLocalizedPath('/tools/chords', locale)}
+          class="bg-tuner-card rounded-lg p-5 hover:bg-tuner-faded transition-colors group"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-white group-hover:text-primary-500 transition-colors">
+              {tTools('chords')}
+            </h3>
+          </div>
+          <p class="text-sm text-text-secondary">{tTools('chordsDesc')}</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

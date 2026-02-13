@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { referenceFrequencies } from '@/lib/data/frequencies';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  return locales.flatMap((locale) =>
+    referenceFrequencies.map((f) => ({ params: { locale, frequency: f.slug } }))
+  );
+};
+
+const { locale, frequency } = Astro.params;
+return Astro.redirect(`/${locale}/tools/tuning-fork/${frequency}`, 301);
+---

@@ -1,0 +1,36 @@
+{
+  "name": "TuningFork - Free Online Instrument Tuner",
+  "short_name": "TuningFork",
+  "description": "Free online tuner for guitar, bass, ukulele, violin, and more. Use your microphone for instant pitch detection or play reference tones.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#22c55e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["music", "utilities", "education"],
+  "screenshots": [
+    {
+      "src": "/screenshots/tuner.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ]
+}

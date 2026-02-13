@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages, useTranslations } from '@/i18n/utils';
+import { InstrumentChordsPageIsland } from '@/components/pages/InstrumentChordsPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  const instruments = ['guitar', 'ukulele'];
+  return locales.flatMap((locale) =>
+    instruments.map((instrument) => ({ params: { locale, instrument } }))
+  );
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+const { instrument: instrumentSlug } = Astro.params;
+const tSeo = useTranslations(locale, 'seo');
+const instrumentName = instrumentSlug === 'guitar' ? 'Guitar' : 'Ukulele';
+const title = tSeo('chordsTitle', { instrument: instrumentName });
+---
+<BaseLayout title={`${title} | TuningFork`} locale={locale}>
+  <InstrumentChordsPageIsland
+    client:load
+    instrumentSlug={instrumentSlug}
+    locale={locale}
+    messages={messages}
+  />
+</BaseLayout>

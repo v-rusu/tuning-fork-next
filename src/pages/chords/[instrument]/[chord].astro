@@ -1,0 +1,13 @@
+---
+import { guitarChords, ukuleleChords } from '@/lib/data/chords';
+
+export function getStaticPaths() {
+  return [
+    ...guitarChords.map((c) => ({ params: { instrument: 'guitar', chord: c.slug } })),
+    ...ukuleleChords.map((c) => ({ params: { instrument: 'ukulele', chord: c.slug } })),
+  ];
+}
+
+const { instrument, chord } = Astro.params;
+return Astro.redirect(`/tools/chords/${instrument}/${chord}`, 301);
+---

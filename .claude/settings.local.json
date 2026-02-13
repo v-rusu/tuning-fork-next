@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm info:*)",
+      "Bash(npm pack:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebSearch",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)",
+      "Bash(npm run dev:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(done)",
+      "Bash(xargs ls:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages } from '@/i18n/utils';
+import { TunerPageIsland } from '@/components/pages/TunerPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { locale: 'es' } },
+    { params: { locale: 'de' } },
+    { params: { locale: 'fr' } },
+  ];
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+---
+<BaseLayout title="Chromatic Online Tuner | TuningFork" locale={locale}>
+  <TunerPageIsland client:load messages={messages} />
+</BaseLayout>

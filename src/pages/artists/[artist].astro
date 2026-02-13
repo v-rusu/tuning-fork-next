@@ -1,0 +1,246 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { useTranslations, getLocalizedPath } from '@/i18n/utils';
+import { getAllArtists, getArtistBySlug, getSimilarArtists, groupSongsByTuning } from '@/lib/data/artists';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const artists = getAllArtists();
+  return artists.map((a) => ({ params: { artist: a.slug } }));
+};
+
+const locale = 'en' as const;
+const t = useTranslations(locale, 'artists');
+const { artist: artistSlug } = Astro.params;
+const artist = getArtistBySlug(artistSlug);
+
+if (!artist) {
+  return Astro.redirect('/404');
+}
+
+const similarArtists = getSimilarArtists(artist, 5);
+const songsByTuning = groupSongsByTuning(artist);
+
+const title = artist.band
+  ? `${artist.name} (${artist.band}) - Guitar Setup & Tunings | TuningFork`
+  : `${artist.name} - Guitar Setup & Tunings | TuningFork`;
+const description = `Discover ${artist.name}'s guitar tunings, string gauge (${artist.stringGauge}), and gear setup. Learn to play like ${artist.name} with ${artist.primaryTunings[0]} tuning.`;
+---
+<BaseLayout title={title} description={description} locale={locale}>
+  <div class="container mx-auto px-4 py-6 sm:py-10">
+    <!-- Header -->
+    <header class="mb-8">
+      <nav class="mb-4 text-sm">
+        <a href={getLocalizedPath('/artists', locale)} class="text-text-secondary hover:text-white">
+          {t('allArtists')}
+        </a>
+        <span class="text-text-secondary mx-2">/</span>
+        <span class="text-white">{artist.name}</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-bold text-white">
+        {artist.name} - Guitar Setup & Tunings
+      </h1>
+      {artist.band && (
+        <p class="text-xl text-text-secondary mt-1">{artist.band}</p>
+      )}
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main content -->
+      <div class="lg:col-span-2 space-y-10">
+        <!-- Quick Facts -->
+        <section class="bg-tuner-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold text-white mb-4">{t('quickFacts')}</h2>
+          <dl class="grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-xs text-text-secondary uppercase tracking-wide">{t('primaryTuning')}</dt>
+              <dd class="text-white font-medium mt-1">
+                {artist.primaryAppTuning?.name || artist.primaryTunings[0]}
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs text-text-secondary uppercase tracking-wide">{t('stringGauge')}</dt>
+              <dd class="text-white font-medium mt-1 text-sm">{artist.stringGauge}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-text-secondary uppercase tracking-wide">{t('stringBrand')}</dt>
+              <dd class="text-white font-medium mt-1 text-sm">{artist.stringBrand}</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-text-secondary uppercase tracking-wide">{t('genre')}</dt>
+              <dd class="text-white font-medium mt-1">{artist.genre.name}</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- About Artist's Sound -->
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-4">
+            About {artist.name}&apos;s Sound
+          </h2>
+          <p class="text-text-secondary leading-relaxed">{artist.bio}</p>
+        </section>
+
+        <!-- Tunings Used -->
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-4">Tunings Used</h2>
+          <div class="space-y-6">
+            {Array.from(songsByTuning.entries()).map(([tuning, songs]) => {
+              const tuningSlug = songs[0]?.tuningSlug;
+              return (
+                <div class="bg-tuner-card rounded-lg p-5">
+                  <div class="flex items-center justify-between mb-3">
+                    <h3 class="font-semibold text-white">
+                      {tuning} - {songs.length} {songs.length === 1 ? 'song' : 'songs'}
+                    </h3>
+                  </div>
+                  <ul class="space-y-2">
+                    {songs.map((song) => (
+                      <li class="flex items-center justify-between">
+                        <span class="text-text-secondary">{song.title}</span>
+                        {tuningSlug && (
+                          <a
+                            href={getLocalizedPath(`/tools/tuner/guitar/${tuningSlug}`, locale)}
+                            class="text-xs text-primary-500 hover:text-primary-400"
+                          >
+                            Try this tuning &rarr;
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <!-- String Setup -->
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-4">String Setup</h2>
+          <div class="bg-tuner-card rounded-lg p-5 space-y-4">
+            <div>
+              <h3 class="text-sm font-medium text-text-secondary uppercase tracking-wide mb-2">
+                Primary Strings
+              </h3>
+              <p class="text-white font-medium">{artist.stringBrand}</p>
+              <p class="text-text-secondary text-sm">{artist.stringGauge}</p>
+            </div>
+            <div>
+              <h3 class="text-sm font-medium text-text-secondary uppercase tracking-wide mb-2">
+                Why {artist.name} uses these
+              </h3>
+              <p class="text-text-secondary text-sm leading-relaxed">{artist.gearNotes}</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sources -->
+        {artist.sources.length > 0 && (
+          <section>
+            <h2 class="text-xl font-semibold text-white mb-4">{t('sources')}</h2>
+            <ul class="space-y-2">
+              {artist.sources.map((source) => {
+                let displayName = source;
+                try {
+                  const url = new URL(source);
+                  displayName = url.hostname.replace('www.', '');
+                } catch {
+                  // Use full URL if parsing fails
+                }
+                return (
+                  <li>
+                    <a
+                      href={source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm text-primary-500 hover:text-primary-400"
+                    >
+                      {displayName}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
+
+        <!-- Footer -->
+        <footer class="border-t border-tuner-faded/30 pt-6 text-sm text-text-secondary">
+          <p>Last updated: January 2026</p>
+          <p class="mt-1">Know something we don&apos;t? <span class="text-primary-500">Submit correction</span></p>
+        </footer>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <!-- Try Artist's Tuning Now -->
+        {artist.primaryAppTuning && (
+          <section class="bg-tuner-card rounded-lg p-5">
+            <h2 class="text-lg font-semibold text-white mb-4">
+              Try {artist.name}&apos;s Tuning Now
+            </h2>
+
+            <!-- Tuning display -->
+            <div class="flex justify-center gap-2 mb-4">
+              {artist.primaryAppTuning.strings.map((string, index) => (
+                <div class="text-center">
+                  <div class="w-9 h-9 rounded-full bg-tuner-faded flex items-center justify-center">
+                    <span class="text-white font-mono text-sm">
+                      {string.note}
+                      <sub class="text-xs text-text-secondary">{string.octave}</sub>
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <!-- Tuning selector for artists with multiple tunings -->
+            {artist.appTunings.length > 1 && (
+              <div class="mb-4">
+                <select class="w-full bg-tuner-faded text-white rounded-lg px-3 py-2 text-sm border-none">
+                  {artist.appTunings.map((tuning) => (
+                    <option value={tuning.slug}>
+                      {tuning.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            <a
+              href={getLocalizedPath(`/tools/tuner/guitar/${artist.primaryAppTuning.slug}`, locale)}
+              class="block w-full py-3 px-4 border-2 border-accent text-accent hover:bg-accent hover:text-black text-center rounded-lg font-medium transition-colors"
+            >
+              {t('openTuner')}
+            </a>
+          </section>
+        )}
+
+        <!-- Similar Artists -->
+        {similarArtists.length > 0 && (
+          <section>
+            <h2 class="text-lg font-semibold text-white mb-4">{t('similarArtists')}</h2>
+            <div class="space-y-2">
+              {similarArtists.map((a) => (
+                <a
+                  href={getLocalizedPath(`/artists/${a.slug}`, locale)}
+                  class="block bg-tuner-card rounded-lg p-3 hover:bg-tuner-faded transition-colors"
+                >
+                  <h3 class="font-medium text-white text-sm">{a.name}</h3>
+                  {a.band && (
+                    <p class="text-xs text-text-secondary mt-0.5">{a.band}</p>
+                  )}
+                  <p class="text-xs text-primary-500 mt-1">
+                    {a.primaryAppTuning?.name || a.primaryTunings[0]}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

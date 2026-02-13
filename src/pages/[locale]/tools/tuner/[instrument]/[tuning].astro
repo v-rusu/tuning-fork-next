@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages, useTranslations } from '@/i18n/utils';
+import { instruments, getInstrumentBySlug, getTuningBySlug } from '@/lib/data/instruments';
+import { TuningTunerPageIsland } from '@/components/pages/TuningTunerPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  return locales.flatMap((locale) =>
+    instruments.flatMap((i) =>
+      i.tunings.map((t) => ({
+        params: { locale, instrument: i.slug, tuning: t.slug },
+      }))
+    )
+  );
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+const { instrument: instrumentSlug, tuning: tuningSlug } = Astro.params;
+const instrument = getInstrumentBySlug(instrumentSlug);
+const tuning = instrument ? getTuningBySlug(instrument, tuningSlug) : undefined;
+---
+<BaseLayout title={`${instrument?.name || ''} ${tuning?.name || ''} Tuner | TuningFork`} locale={locale}>
+  <TuningTunerPageIsland
+    client:load
+    instrumentSlug={instrumentSlug}
+    tuningSlug={tuningSlug}
+    locale={locale}
+    messages={messages}
+  />
+</BaseLayout>

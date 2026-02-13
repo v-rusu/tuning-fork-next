@@ -1,0 +1,741 @@
+{
+  "classic_rock": [
+    {
+      "name": "Jimi Hendrix",
+      "primary_tunings": ["Eb Standard (Half-step down)", "E Standard"],
+      "string_brand": "Fender Rock 'n' Roll 150 (Custom gauges built by Roger Mayer)",
+      "string_gauge": ".010, .013, .015, .026, .032, .038 (Heavy-high, light-low setup)",
+      "popular_songs": [
+        {"song": "Purple Haze", "tuning": "E Standard"},
+        {"song": "Hey Joe", "tuning": "E Standard"},
+        {"song": "Foxy Lady", "tuning": "E Standard"},
+        {"song": "The Wind Cries Mary", "tuning": "E Standard"},
+        {"song": "Voodoo Child (Slight Return)", "tuning": "Eb Standard"},
+        {"song": "Little Wing", "tuning": "Eb Standard"},
+        {"song": "Red House", "tuning": "Eb Standard"},
+        {"song": "All Along the Watchtower", "tuning": "Eb Standard"}
+      ],
+      "bio": "James Marshall Hendrix (1942-1970) revolutionized electric guitar playing in ways that still influence musicians today. A left-handed player who played right-handed guitars flipped upside down, Hendrix pioneered the use of feedback, distortion, and wah-wah pedals as musical elements. His innovative approach to the Stratocaster, combined with Marshall amplifiers, created tones never heard before. Despite a career spanning only four years before his death at 27, Hendrix recorded three landmark studio albums and became the highest-paid performer at Woodstock 1969. His influence extends beyond rock into funk, metal, and experimental music.",
+      "gear_notes": "Hendrix tuned down a half-step to Eb for easier bending and to better match his vocal range. His unusual string setup (heavy high strings, light low strings) was the opposite of conventional wisdom, allowing for thick rhythm tones while maintaining easy lead bending. He famously played right-handed Stratocasters flipped upside down, which affected the string break angle over the nut and bridge, contributing to his unique tone. Roger Mayer, his effects guru, custom-built string sets for him.",
+      "sources": [
+        "https://stringjoy.com/jimi-hendrixs-guitar-string-gauges/",
+        "https://www.guitarworld.com/features/secrets-of-jimi-hendrixs-guitar-setup-roger-mayer-interview",
+        "https://www.fender.com/products/jimi-hendrix-voodoo-child-electric-guitar-strings"
+      ]
+    },
+    {
+      "name": "Eric Clapton",
+      "primary_tunings": ["E Standard"],
+      "string_brand": "Ernie Ball Regular Slinky (Electric), Martin Clapton's Choice (Acoustic)",
+      "string_gauge": ".010-.046 (Electric), .012-.054 Phosphor Bronze (Acoustic)",
+      "popular_songs": [
+        {"song": "Layla", "tuning": "E Standard (D Standard for Derek and the Dominos version)"},
+        {"song": "Wonderful Tonight", "tuning": "E Standard"},
+        {"song": "Cocaine", "tuning": "E Standard"},
+        {"song": "Crossroads", "tuning": "E Standard"},
+        {"song": "Tears in Heaven", "tuning": "E Standard"},
+        {"song": "Bell Bottom Blues", "tuning": "E Standard"},
+        {"song": "Badge", "tuning": "E Standard"},
+        {"song": "White Room", "tuning": "E Standard (Cream)"}
+      ],
+      "bio": "Eric Patrick Clapton (born 1945) is a British guitarist who has been a dominant force in blues-rock for over six decades. Starting with the Yardbirds, then John Mayall's Bluesbreakers, Cream, Blind Faith, Derek and the Dominos, and a successful solo career, Clapton earned the nickname 'Slowhand' for his fluid, economical playing style. He's the only three-time inductee into the Rock and Roll Hall of Fame. His playing evolved from fiery blues-rock in the 1960s to a more refined, melodic approach. Clapton has sold over 280 million records worldwide and won 18 Grammy Awards.",
+      "gear_notes": "Clapton prefers a straightforward setup with low action for easy playability. His signature Stratocaster features active mid-boost circuitry developed with Fender. He switched from heavy Gibson-style guitars to Stratocasters in the 1970s, citing the lighter weight and comfort. His acoustic work, particularly on the MTV Unplugged album, showcased his fingerpicking abilities. Clapton has maintained consistent string gauges throughout his career, valuing reliability and consistency.",
+      "sources": [
+        "https://whereseric.com/faq/guitar-strings-what-kind-strings-does-eric-clapton-use/",
+        "https://www.ernieball.com/guitar-strings",
+        "https://www.martinguitar.com/strings/acoustic/eric-clapton-guitar-strings.html"
+      ]
+    },
+    {
+      "name": "Jimmy Page",
+      "band": "Led Zeppelin",
+      "primary_tunings": ["E Standard", "DADGAD (Celtic)", "Open G", "Drop D"],
+      "string_brand": "Ernie Ball Super Slinky (Electric), Ernie Ball Earthwood (Acoustic)",
+      "string_gauge": ".009-.042 (Electric), .010-.050 Extra Light (Acoustic)",
+      "popular_songs": [
+        {"song": "Stairway to Heaven", "tuning": "E Standard"},
+        {"song": "Kashmir", "tuning": "DADGAD"},
+        {"song": "Black Dog", "tuning": "E Standard"},
+        {"song": "Whole Lotta Love", "tuning": "E Standard"},
+        {"song": "The Rain Song", "tuning": "Gsus4 (DGCGCD)"},
+        {"song": "In My Time of Dying", "tuning": "Open A"},
+        {"song": "Ten Years Gone", "tuning": "Drop D"},
+        {"song": "Going to California", "tuning": "Double Drop D (DADGBD)"},
+        {"song": "Friends", "tuning": "Open C6 (CACGCE)"},
+        {"song": "White Summer/Black Mountain Side", "tuning": "DADGAD"}
+      ],
+      "bio": "James Patrick Page (born 1944) is one of rock's most influential guitarists and producers. Before Led Zeppelin, he was one of London's most sought-after session guitarists, playing on recordings by The Who, The Kinks, and countless others. As Led Zeppelin's guitarist and producer, he pioneered multi-tracking, reverse echo, and created some of rock's most iconic riffs. Page was innovative in his use of alternate tunings, violin bows, and studio techniques. Led Zeppelin sold over 300 million albums, making them one of the best-selling bands ever.",
+      "gear_notes": "Page is famous for using extremely light gauge strings (.008 on his high E during the Zeppelin era), which enabled his signature wide bends and expressive vibrato. He pioneered the use of DADGAD tuning in rock music, borrowing from folk traditions. His use of a violin bow on the guitar became a trademark live effect. Page often tuned multiple guitars to different tunings for live shows to accommodate songs like Kashmir and The Rain Song without retuning between songs.",
+      "sources": [
+        "https://stringjoy.com/jimmy-page-guitars/",
+        "https://forums.ledzeppelin.com/topic/12575-what-gauge-is-jimmys-high-e-string/",
+        "https://skippedonshuffle.com/led-zeppelin-guitar-tunings/"
+      ]
+    },
+    {
+      "name": "David Gilmour",
+      "band": "Pink Floyd",
+      "primary_tunings": ["E Standard", "Drop D"],
+      "string_brand": "GHS Boomers (Signature Series)",
+      "string_gauge": ".010, .012, .016, .028, .038, .048 (Stratocaster), .0105, .013, .017, .030, .040, .050 (Les Paul)",
+      "popular_songs": [
+        {"song": "Comfortably Numb", "tuning": "E Standard"},
+        {"song": "Time", "tuning": "E Standard"},
+        {"song": "Shine On You Crazy Diamond", "tuning": "E Standard"},
+        {"song": "Money", "tuning": "E Standard"},
+        {"song": "Another Brick in the Wall", "tuning": "Drop D"},
+        {"song": "Hey You", "tuning": "E Standard (with Nashville tuning overdub)"},
+        {"song": "Wish You Were Here", "tuning": "E Standard"},
+        {"song": "High Hopes", "tuning": "E Standard"}
+      ],
+      "bio": "David Jon Gilmour (born 1946) joined Pink Floyd in 1968 and became the band's primary guitarist and co-lead vocalist. His playing is characterized by melodic, sustained solos with extensive use of bending, vibrato, and effects. Gilmour's tone is often described as 'singing' - each note carefully chosen for maximum emotional impact. After Roger Waters left in 1985, Gilmour led Pink Floyd through commercially successful albums. His solo career has also produced critically acclaimed work. He's known for his philanthropic efforts, donating significant portions of his wealth to charity.",
+      "gear_notes": "Gilmour uses custom gauge sets that differ from standard packages - notably a heavier wound G string (.028 instead of typical .024-.026) for better intonation during his extensive bending. His connection with GHS strings began during The Wall sessions in 1979. The heavier gauges on his Les Paul accommodate his Gibson's shorter scale length. Gilmour is meticulous about his setup, using floating tremolo systems that require careful string tension balancing. His use of Nashville tuning (high strings tuned an octave up) on 'Hey You' created the distinctive doubled effect.",
+      "sources": [
+        "https://stringjoy.com/david-gilmours-guitar-string-gauges/",
+        "https://www.ghsstrings.com/products/11344-david-gilmour-signature",
+        "https://www.kitrae.net/music/David_Gilmour_Strat%20Setup.html"
+      ]
+    },
+    {
+      "name": "Eddie Van Halen",
+      "primary_tunings": ["Eb Standard (Half-step down)", "Drop D (tuned down)"],
+      "string_brand": "Fender 150XL (early), Ernie Ball (later), EVH Premium Strings",
+      "string_gauge": ".009-.040 (early career), .009-.042 or .009-.046 (later)",
+      "popular_songs": [
+        {"song": "Eruption", "tuning": "Eb Standard"},
+        {"song": "Jump", "tuning": "Eb Standard"},
+        {"song": "Panama", "tuning": "Eb Standard"},
+        {"song": "Hot for Teacher", "tuning": "Eb Standard"},
+        {"song": "Ain't Talkin' 'Bout Love", "tuning": "Eb Standard"},
+        {"song": "Running with the Devil", "tuning": "Eb Standard"},
+        {"song": "Unchained", "tuning": "Drop Db (Drop D down half step)"},
+        {"song": "Mean Street", "tuning": "Eb Standard"}
+      ],
+      "bio": "Edward Lodewijk Van Halen (1955-2020) single-handedly changed rock guitar in 1978 with Van Halen's debut album. His two-handed tapping technique, dive bombs, and aggressive picking revolutionized guitar playing. A classically trained pianist, Eddie brought a musical sophistication to hard rock that influenced generations. He designed his own guitars, invented the 'Frankenstein' guitar, and developed the EVH brand with innovative amplifier and guitar designs. Van Halen sold over 80 million albums worldwide. Eddie died of cancer in 2020, leaving an irreplaceable legacy.",
+      "gear_notes": "Eddie tuned down to Eb standard for most of Van Halen's catalog - he famously said E standard felt like 'rubber band city' and preferred the feel of half-step down tuning. His early string gauges (.009-.040) were exceptionally light for rock, enabling his fluid legato and tapping. He modified everything about his guitars, from routing bodies for different pickups to creating his own bridges. His 'brown sound' came from modified Marshall amplifiers, Variac voltage reducers, and his precise picking technique. The Floyd Rose tremolo system became essential to his style.",
+      "sources": [
+        "https://www.reddit.com/r/vanhalen/comments/sqsdxa/eddies_string_gaugesanyone_know/",
+        "https://www.guitarguitar.co.uk/news/142212/",
+        "https://equipboard.com/items/evh-premium-electric-guitar-strings"
+      ]
+    },
+    {
+      "name": "Stevie Ray Vaughan",
+      "primary_tunings": ["Eb Standard (Half-step down)"],
+      "string_brand": "GHS Nickel Rockers",
+      "string_gauge": ".013, .015, .019p, .028, .038, .058 (Custom heavy gauge)",
+      "popular_songs": [
+        {"song": "Pride and Joy", "tuning": "Eb Standard"},
+        {"song": "Texas Flood", "tuning": "Eb Standard"},
+        {"song": "Couldn't Stand the Weather", "tuning": "Eb Standard"},
+        {"song": "Cold Shot", "tuning": "Eb Standard"},
+        {"song": "The Sky Is Crying", "tuning": "Eb Standard"},
+        {"song": "Scuttle Buttin'", "tuning": "Eb Standard"},
+        {"song": "Mary Had a Little Lamb", "tuning": "Eb Standard"},
+        {"song": "Rude Mood", "tuning": "Eb Standard"}
+      ],
+      "bio": "Stevie Ray Vaughan (1954-1990) brought blues back to mainstream rock in the 1980s with his virtuosic playing and passionate performances. His debut album Texas Flood (1983) announced an extraordinary talent who combined the influence of Albert King, Jimi Hendrix, and Buddy Guy into something uniquely powerful. SRV's tone was famously thick and aggressive, achieved through his unusually heavy strings and fierce attack. He battled addiction and emerged clean in 1988, only to die in a helicopter crash in 1990 at age 35. His influence on blues guitar remains immeasurable.",
+      "gear_notes": "SRV's use of .013 gauge strings (sometimes going to .012-.062) is legendary - these heavy gauges combined with Eb tuning gave his tone unmatched thickness and sustain. The lighter tension from tuning down balanced the heavy gauges somewhat, but playing SRV's setup still requires significant hand strength. His strings were wound by GHS to his specifications. When his fingers got sore, he'd temporarily drop to .011 gauges. His Stratocasters had higher action than typical, and he used the tremolo bar extensively. Super Glue on his fingertips became necessary during long performances.",
+      "sources": [
+        "https://stringjoy.com/stevie-ray-vaughans-guitar-string-gauges-3/",
+        "https://srvarchive.com/guitar-strings",
+        "https://www.guitarguitar.co.uk/news/142212/"
+      ]
+    },
+    {
+      "name": "Keith Richards",
+      "band": "Rolling Stones",
+      "primary_tunings": ["Open G (G-D-G-B-D, 5-string)", "E Standard", "Open D", "Open E"],
+      "string_brand": "Ernie Ball",
+      "string_gauge": ".011-.048 (typical)",
+      "popular_songs": [
+        {"song": "Start Me Up", "tuning": "Open G (5-string)"},
+        {"song": "Brown Sugar", "tuning": "Open G (5-string)"},
+        {"song": "Honky Tonk Women", "tuning": "Open G (5-string)"},
+        {"song": "Tumbling Dice", "tuning": "Open G (5-string)"},
+        {"song": "Wild Horses", "tuning": "Open G (5-string)"},
+        {"song": "Jumpin' Jack Flash", "tuning": "E Standard/Open E"},
+        {"song": "Satisfaction", "tuning": "E Standard"},
+        {"song": "Gimme Shelter", "tuning": "Open E"},
+        {"song": "Street Fighting Man", "tuning": "Open D (acoustic)"},
+        {"song": "Can't You Hear Me Knocking", "tuning": "Open G"}
+      ],
+      "bio": "Keith Richards (born 1943) is the rhythm guitar architect of the Rolling Stones. His interlocking guitar parts with Ronnie Wood (and previously Mick Taylor and Brian Jones) created the 'two guitars as one' approach that defined the Stones' sound. Richards learned Open G tuning from Ry Cooder in 1968 and made it his signature. His rhythm playing is deceptively complex - what sounds like simple riffs are actually sophisticated combinations of bass lines, chords, and lead fills played simultaneously. Beyond music, Richards' survival of legendary excess made him a rock icon.",
+      "gear_notes": "Keith's famous 5-string open G tuning (removing the low E string) was inspired by banjo and bottleneck blues players. The removed string simplifies fingering and prevents the droning low E from muddying the open G chord. He tunes D-G-D-G-B-D and often capos at various frets. His Telecasters (especially 'Micawber') are his primary instruments, modified with humbucker pickups. Richards uses medium gauge strings to balance the open tuning's tension requirements. His '5-string weaving' technique creates rhythm parts that function as both bass and melody.",
+      "sources": [
+        "https://www.fundamental-changes.com/how-keith-richards-plays-in-open-g-tuning/",
+        "https://www.fachords.com/blog2014/guitar-video-lesson-keith-richards-rhythm-style/",
+        "https://iorr.org/talk/read.php?1,2599940,2600899"
+      ]
+    },
+    {
+      "name": "Carlos Santana",
+      "primary_tunings": ["E Standard"],
+      "string_brand": "GHS Nickel Rockers (Big Core series)",
+      "string_gauge": ".0095, .0115, .016, .025, .033, .043 (Custom 'Big Core' gauges)",
+      "popular_songs": [
+        {"song": "Black Magic Woman", "tuning": "E Standard"},
+        {"song": "Oye Como Va", "tuning": "E Standard"},
+        {"song": "Smooth", "tuning": "E Standard"},
+        {"song": "Europa", "tuning": "E Standard"},
+        {"song": "Samba Pa Ti", "tuning": "E Standard"},
+        {"song": "Evil Ways", "tuning": "E Standard"},
+        {"song": "Maria Maria", "tuning": "E Standard"},
+        {"song": "Soul Sacrifice", "tuning": "E Standard"}
+      ],
+      "bio": "Carlos Augusto Santana (born 1947) fused rock, Latin, blues, and jazz into a distinctive sound that has spanned six decades. His breakthrough at Woodstock 1969 with 'Soul Sacrifice' introduced his sustained, singing tone to millions. The Santana band's rhythmic complexity - combining timbales, congas, and Hammond organ with rock guitar - created an entirely new genre. After commercial decline in the late '70s and '80s, Santana's 1999 comeback album Supernatural won nine Grammy Awards and sold over 30 million copies. He's one of the best-selling artists of all time.",
+      "gear_notes": "Santana's signature 'Big Core' strings use an unusual gauge progression designed by his tech Rene Martinez. The thicker core wire produces more fundamental tone with less overtones, contributing to his smooth, violin-like sustain. His PRS guitars feature a shorter 24.5\" scale length (compared to Fender's 25.5\"), which combined with his string choice creates his characteristic easy playability and warm tone. Santana's Mesa Boogie amplifiers were essentially developed in collaboration with him - the company's first amps were built specifically for his needs.",
+      "sources": [
+        "https://www.groundguitar.com/carlos-santana-guitars-and-gear/",
+        "https://lordofthestrings.com/en/brands/ghs",
+        "https://www.stringsandbeyond.com/ghsstrings.html"
+      ]
+    },
+    {
+      "name": "Jeff Beck",
+      "primary_tunings": ["E Standard"],
+      "string_brand": "Ernie Ball",
+      "string_gauge": "Variable: .009-.042 to .011-.049 (changed throughout tours)",
+      "popular_songs": [
+        {"song": "Cause We've Ended as Lovers", "tuning": "E Standard"},
+        {"song": "Beck's Bolero", "tuning": "E Standard"},
+        {"song": "Freeway Jam", "tuning": "E Standard"},
+        {"song": "Blue Wind", "tuning": "E Standard"},
+        {"song": "Where Were You", "tuning": "E Standard"},
+        {"song": "People Get Ready", "tuning": "E Standard"},
+        {"song": "Brush With the Blues", "tuning": "E Standard"},
+        {"song": "A Day in the Life", "tuning": "E Standard"}
+      ],
+      "bio": "Geoffrey Arnold Beck (1944-2023) was one of the most technically accomplished and innovative rock guitarists. After the Yardbirds, he formed the Jeff Beck Group (featuring Rod Stewart and Ronnie Wood), then pursued an instrumental career that defied categorization. Beck abandoned picks entirely in the 1980s, developing a fingers-only technique that gave him unprecedented control over dynamics and expression. His use of the tremolo arm was revolutionary - treating it as an essential part of his technique rather than an effect. Beck won eight Grammy Awards and was inducted into the Rock Hall of Fame twice.",
+      "gear_notes": "Beck was known for changing string gauges throughout tours, starting lighter and gradually moving heavier as his fingers toughened. His pickless technique required specific string response - he relied on finger attack variations for dynamics. Beck's extensive use of the Stratocaster tremolo arm required careful setup, and his tech maintained extremely precise spring tension. He often started tours with .009-.042 and ended with .011-.049. His use of volume swells, harmonics, and tremolo arm created sounds often mistaken for synthesizers.",
+      "sources": [
+        "https://www.ultimate-guitar.com/forum/showthread.php?t=1294858",
+        "https://www.groundguitar.com/jeff-beck-guitars-and-gear/",
+        "https://www.guitarguitar.co.uk/news/142212/"
+      ]
+    },
+    {
+      "name": "Brian May",
+      "band": "Queen",
+      "primary_tunings": ["E Standard", "Drop D"],
+      "string_brand": "Optima 24K Gold Plated (Signature Series)",
+      "string_gauge": ".009-.042 (Originally used banjo strings for high E)",
+      "popular_songs": [
+        {"song": "Bohemian Rhapsody", "tuning": "E Standard"},
+        {"song": "We Will Rock You", "tuning": "E Standard"},
+        {"song": "Tie Your Mother Down", "tuning": "Drop D"},
+        {"song": "Brighton Rock", "tuning": "E Standard"},
+        {"song": "Killer Queen", "tuning": "E Standard"},
+        {"song": "The Show Must Go On", "tuning": "E Standard"},
+        {"song": "I Want It All", "tuning": "E Standard"},
+        {"song": "Fat Bottomed Girls", "tuning": "Drop D"},
+        {"song": "Somebody to Love", "tuning": "E Standard"}
+      ],
+      "bio": "Brian Harold May (born 1947) built his iconic 'Red Special' guitar with his father using wood from a Victorian fireplace. This unique instrument, combined with his sixpence coin pick and Vox AC30 amplifiers, created Queen's distinctive multi-layered guitar sound. May earned a PhD in astrophysics and has worked with NASA. His orchestral approach to guitar - layering harmonies and creating 'guitar orchestras' - was innovative and influential. Queen sold over 300 million records, and May's guitar solos consistently rank among rock's greatest. He was knighted in 2023.",
+      "gear_notes": "May originally used banjo strings for his high E (.008 gauge) because standard guitar strings broke too frequently with his aggressive style. The Red Special's unique construction (zero fret, Burns Tri-Sonic pickups, extensive switching options) required specific string tension. His current Optima gold-plated strings reduce finger noise and corrosion. May's technique of playing close to the bridge with a coin (sixpence) produces his characteristic bright, cutting tone. The Red Special's tremolo system is unconventional and required custom string gauges for optimal performance.",
+      "sources": [
+        "https://www.stringsdirect.co.uk/blogs/blog/player-spotlight-brian-may",
+        "https://www.reddit.com/r/todayilearned/comments/wprw0c/til_queen_guitarist_brian_may_uses_banjo_strings/",
+        "https://www.groundguitar.com/brian-may-guitars-and-gear/"
+      ]
+    }
+  ],
+  "grunge_alt_rock": [
+    {
+      "name": "Kurt Cobain",
+      "band": "Nirvana",
+      "primary_tunings": ["E Standard", "Eb Standard", "Drop D", "Drop Db"],
+      "string_brand": "Dean Markley",
+      "string_gauge": ".010-.052 (Light top, heavy bottom)",
+      "popular_songs": [
+        {"song": "Smells Like Teen Spirit", "tuning": "E Standard"},
+        {"song": "Come as You Are", "tuning": "E Standard (with chorus effect)"},
+        {"song": "Lithium", "tuning": "E Standard"},
+        {"song": "In Bloom", "tuning": "E Standard"},
+        {"song": "Heart-Shaped Box", "tuning": "Drop Db"},
+        {"song": "All Apologies", "tuning": "Drop D"},
+        {"song": "About a Girl", "tuning": "E Standard"},
+        {"song": "Polly", "tuning": "Drop D"},
+        {"song": "Drain You", "tuning": "E Standard"}
+      ],
+      "bio": "Kurt Donald Cobain (1967-1994) was the reluctant voice of Generation X, channeling punk attitude through melodic sensibilities that created grunge. His songwriting combined pop hooks with abrasive distortion, screamed vocals with whispered verses. Cobain's lyrics addressed alienation, social issues, and personal demons with raw honesty. Nirvana's Nevermind (1991) sold over 30 million copies and ended hair metal's commercial dominance. His death by suicide at 27 left an artistic legacy still influential today. Cobain proved that punk values and mainstream success weren't mutually exclusive.",
+      "gear_notes": "Cobain preferred light-top, heavy-bottom strings (.010-.052) for the flexibility to play both clean arpeggios and heavy power chords. He used various Fender guitars (Jaguars, Mustangs, Jag-Stangs) with their shorter scale lengths and floating tremolos. His approach was deliberately anti-virtuoso - he valued emotion over technique. Cobain's use of the Boss DS-1 and DS-2 distortion pedals, Small Clone chorus, and cheap Fender amps defined grunge guitar tone. His aggressive strumming often broke strings, and his guitars were notoriously beaten up.",
+      "sources": [
+        "https://www.uberproaudio.com/who-plays-what/76-nirvana-kurt-cobain-guitar-gear-rig-and-equipment",
+        "https://mixdownmag.com.au/features/rig-rundown-kurt-cobain/",
+        "https://www.groundguitar.com/kurt-cobain-gear/"
+      ]
+    },
+    {
+      "name": "Jerry Cantrell",
+      "band": "Alice in Chains",
+      "primary_tunings": ["Eb Standard", "Drop Db", "Drop Cb"],
+      "string_brand": "Ernie Ball",
+      "string_gauge": ".010-.046",
+      "popular_songs": [
+        {"song": "Man in the Box", "tuning": "Eb Standard"},
+        {"song": "Rooster", "tuning": "Eb Standard"},
+        {"song": "Would?", "tuning": "Eb Standard"},
+        {"song": "Them Bones", "tuning": "Drop Db"},
+        {"song": "Dam That River", "tuning": "Drop Db"},
+        {"song": "Down in a Hole", "tuning": "Eb Standard"},
+        {"song": "Angry Chair", "tuning": "Drop Db"},
+        {"song": "No Excuses", "tuning": "Eb Standard"},
+        {"song": "Sludge Factory", "tuning": "Drop Db"}
+      ],
+      "bio": "Jerry Fulton Cantrell Jr. (born 1966) is the primary songwriter and guitarist of Alice in Chains, one of grunge's most influential bands. His heavy riffs combined with Layne Staley's (and later William DuVall's) vocals created a dark, sludgy sound distinct from Seattle peers. Cantrell's use of the talk box and wah pedal became signature elements. After Staley's death in 2002, Cantrell continued with solo work and eventually reformed Alice in Chains. His riff-writing influenced countless metal and alternative bands. Alice in Chains has sold over 30 million albums worldwide.",
+      "gear_notes": "Cantrell has stated that Eb standard is 'standard tuning' for Alice in Chains - essentially everything is down a half-step. He uses remarkably light .010 gauge strings even for Drop Db tuning, proving heavy tones don't require heavy strings. His G&L Rampage guitars and later his signature models feature hot pickups that compensate for lighter string tension. Cantrell's riffs often emphasize semitones and dissonant intervals that define the AIC sound. His use of the Dunlop wah and talk box (heard on 'Man in the Box') became integral to the band's identity.",
+      "sources": [
+        "https://www.reddit.com/r/AliceInChains/comments/ht1p5i/does_jerry_cantrell_know_what_standard_tuning_is/",
+        "https://www.guitarguitar.co.uk/news/141772/",
+        "https://www.ernieball.com/stringtheory/jerry-cantrell"
+      ]
+    },
+    {
+      "name": "Stone Gossard & Mike McCready",
+      "band": "Pearl Jam",
+      "primary_tunings": ["E Standard", "Eb Standard", "Open G", "Drop D"],
+      "string_brand": "Ernie Ball, D'Addario",
+      "string_gauge": ".010-.046 (McCready), .011-.052 (Gossard varies)",
+      "popular_songs": [
+        {"song": "Alive", "tuning": "E Standard"},
+        {"song": "Jeremy", "tuning": "E Standard"},
+        {"song": "Black", "tuning": "Eb Standard"},
+        {"song": "Even Flow", "tuning": "Open Dm (DADFAD)"},
+        {"song": "Daughter", "tuning": "Open G (Gossard)"},
+        {"song": "Yellow Ledbetter", "tuning": "Eb Standard"},
+        {"song": "Better Man", "tuning": "E Standard"},
+        {"song": "Corduroy", "tuning": "E Standard"},
+        {"song": "Rearviewmirror", "tuning": "E Standard"}
+      ],
+      "bio": "Stone Gossard (born 1966) and Mike McCready (born 1966) form Pearl Jam's guitar tandem since 1990. Gossard, a founding member of Green River and Mother Love Bone, provides rhythm foundation and atmospheric textures. McCready brings Hendrix-influenced lead work and emotional solos. Their interplay - Gossard's chordal complexity against McCready's blues-rock leads - defines Pearl Jam's sound. The band has sold over 85 million albums and maintained artistic integrity while achieving commercial success. Both guitarists have side projects and production credits outside Pearl Jam.",
+      "gear_notes": "Gossard frequently uses open tunings and alternate voicings, influenced by Neil Young and Keith Richards. His textural rhythm parts on songs like 'Even Flow' use unusual tunings that allow open strings to ring sympathetically. McCready's setup is more traditional - Stratocasters with medium gauge strings for blues-influenced bending. The dual guitar approach allows one guitarist to hold down rhythm while the other adds color or leads. Gossard's Guild acoustics feature prominently in Pearl Jam's unplugged moments.",
+      "sources": [
+        "https://www.musicradar.com/how-to/pearl-jam-even-flow-guitar-lesson-mike-mcready-stone-gossard",
+        "https://www.uberproaudio.com/who-plays-what/184-pearl-jam-stone-gossard-guitar-gear-rig-and-equipment",
+        "http://fivehorizons.com/archive/articles/musc0792.shtml"
+      ]
+    },
+    {
+      "name": "Billy Corgan",
+      "band": "Smashing Pumpkins",
+      "primary_tunings": ["Eb Standard", "E Standard", "Drop D", "C# Standard"],
+      "string_brand": "Ernie Ball",
+      "string_gauge": ".009-.042",
+      "popular_songs": [
+        {"song": "1979", "tuning": "Eb Standard"},
+        {"song": "Bullet with Butterfly Wings", "tuning": "Eb Standard"},
+        {"song": "Today", "tuning": "Eb Standard"},
+        {"song": "Cherub Rock", "tuning": "Eb Standard"},
+        {"song": "Zero", "tuning": "Eb Standard"},
+        {"song": "Disarm", "tuning": "Eb Standard"},
+        {"song": "Tonight, Tonight", "tuning": "Eb Standard"},
+        {"song": "Mayonaise", "tuning": "Eb Standard"},
+        {"song": "Rhinoceros", "tuning": "E Standard"}
+      ],
+      "bio": "William Patrick Corgan (born 1967) founded the Smashing Pumpkins in 1988, creating a sound that merged heavy metal riffs with dream-pop atmospherics. His layered guitar approach - often recording dozens of guitar tracks - created the dense 'wall of sound' on albums like Siamese Dream and Mellon Collie. A perfectionist notorious for recording most guitar and bass parts himself, Corgan's sonic vision dominated the '90s alternative scene. The band has sold over 30 million albums. Despite lineup changes and breakups, Corgan continues to lead various incarnations of the Pumpkins.",
+      "gear_notes": "Corgan's use of Eb tuning allowed for heavier tones while maintaining playability with light .009 gauge strings. His signature sound comes from layering multiple guitar parts with different tones - clean, distorted, with various effects - rather than from string choice. The Big Muff distortion pedal is essential to his sound. Corgan's Reverend signature guitar features his preferred specifications. He's meticulous about changing strings frequently, as the sweat from performances quickly degrades tone. His 'Gish' Strat and various Les Pauls feature throughout SP's catalog.",
+      "sources": [
+        "https://www.reddit.com/r/SmashingPumpkins/comments/1e9vyhe/billy_corgan_guitar_bends/",
+        "https://www.guitarguitar.co.uk/news/140740/",
+        "https://equipboard.com/pros/billy-corgan"
+      ]
+    },
+    {
+      "name": "Dave Grohl",
+      "band": "Foo Fighters",
+      "primary_tunings": ["Drop D", "E Standard"],
+      "string_brand": "D'Addario EXL 115 (modified)",
+      "string_gauge": ".011, .014, .018, .028, .042, .060 (Custom hybrid set)",
+      "popular_songs": [
+        {"song": "Everlong", "tuning": "Drop D"},
+        {"song": "Learn to Fly", "tuning": "E Standard"},
+        {"song": "The Pretender", "tuning": "Drop D"},
+        {"song": "Best of You", "tuning": "Drop D"},
+        {"song": "My Hero", "tuning": "Drop D"},
+        {"song": "Monkey Wrench", "tuning": "Drop D"},
+        {"song": "Times Like These", "tuning": "Drop D"},
+        {"song": "All My Life", "tuning": "Drop D"}
+      ],
+      "bio": "David Eric Grohl (born 1969) emerged as Nirvana's drummer before founding Foo Fighters in 1994. Initially a one-man project (Grohl played all instruments on the debut), Foo Fighters became one of rock's most successful bands. His songwriting blends punk energy with classic rock melody. Beyond Foo Fighters, Grohl has played drums on countless albums (Queens of the Stone Age, Them Crooked Vultures, Nine Inch Nails) and directed the documentary Sound City. The band has won 15 Grammy Awards. His enthusiasm and work ethic make him one of rock's most beloved figures.",
+      "gear_notes": "Grohl's unusual string setup (.011-.060 hybrid) uses very heavy bottom strings while keeping the top strings standard. His tech replaces the bottom two strings from an EXL 115 pack with a .042 A and .060 E. This allows massive low-end power chords in Drop D while maintaining playability for lead lines. His aggressive strumming style requires durable strings. Grohl primarily uses Gibson guitars (ES-335, Explorer, Les Paul) through Mesa Boogie amplifiers. The heavy low E string is essential for the thick rhythm tone that defines Foo Fighters.",
+      "sources": [
+        "https://www.stringsdirect.co.uk/blogs/blog/dave-grohl",
+        "https://equipboard.com/pros/dave-grohl",
+        "https://sonicscoop.com/get-that-guitar-tone-foo-fighters-edition/"
+      ]
+    },
+    {
+      "name": "Tom Morello",
+      "band": "Rage Against the Machine",
+      "primary_tunings": ["Drop D", "E Standard", "Drop Db"],
+      "string_brand": "Ernie Ball",
+      "string_gauge": ".010-.046",
+      "popular_songs": [
+        {"song": "Killing in the Name", "tuning": "Drop D"},
+        {"song": "Bulls on Parade", "tuning": "Drop D"},
+        {"song": "Guerrilla Radio", "tuning": "Drop D"},
+        {"song": "Bombtrack", "tuning": "Drop D"},
+        {"song": "Know Your Enemy", "tuning": "Drop D"},
+        {"song": "Sleep Now in the Fire", "tuning": "Drop D"},
+        {"song": "Testify", "tuning": "Drop D"},
+        {"song": "Wake Up", "tuning": "Drop D"}
+      ],
+      "bio": "Thomas Baptist Morello (born 1964) redefined what the electric guitar could do in Rage Against the Machine. A Harvard political science graduate, Morello created DJ-like scratching, turntable effects, and electronic sounds using only a guitar, amp, and pedals - no samples. His arsenal of unconventional techniques (using the toggle switch, rubbing cables against pickups, feedback manipulation) influenced hip-hop producers and guitarists alike. After RATM, he co-founded Audioslave and Prophets of Rage. A vocal activist, Morello has used music as political protest throughout his career.",
+      "gear_notes": "Morello's famous 'Arm the Homeless' guitar (a custom parts Stratocaster) and his signature 'Soul Power' Telecaster are both set up with standard .010-.046 strings in Drop D. His innovations come from technique and pedals, not specialized setups. The Digitech Whammy pedal is essential to his sound, creating synth-like pitch shifts. Morello's approach proves that radical sounds can come from conventional equipment used unconventionally. His killswitch (toggle switch) technique creates rhythmic stuttering effects. The story goes that 'Killing in the Name''s riff was invented while teaching a student Drop D tuning.",
+      "sources": [
+        "https://www.ultimate-guitar.com/news/general_music_news/tom_morello_i_recorded_every_song_i_made_in_drop-d_on_this_one_guitar.html",
+        "https://www.guitareo.com/riff/5-top-rage-against-the-machine-riffs/",
+        "https://www.reddit.com/r/todayilearned/comments/kbgu2k/til_that_the_iconic_riff_to_rage_against_the/"
+      ]
+    },
+    {
+      "name": "Chris Cornell",
+      "band": "Soundgarden",
+      "primary_tunings": ["Drop D", "Various alternate tunings", "EEEEEE (all strings to E)"],
+      "string_brand": "GHS",
+      "string_gauge": ".009-.046 (varied by tuning)",
+      "popular_songs": [
+        {"song": "Black Hole Sun", "tuning": "Drop D"},
+        {"song": "Outshined", "tuning": "Drop D"},
+        {"song": "Spoonman", "tuning": "Drop D"},
+        {"song": "Rusty Cage", "tuning": "Drop D"},
+        {"song": "Burden in My Hand", "tuning": "Drop D"},
+        {"song": "My Wave", "tuning": "CGCGGE"},
+        {"song": "The Day I Tried to Live", "tuning": "Drop D"},
+        {"song": "Pretty Noose", "tuning": "EEEEEE"}
+      ],
+      "bio": "Christopher John Cornell (1964-2017) was one of rock's greatest vocalists, with a four-octave range that could shift from tender whisper to primal scream. As Soundgarden's frontman and rhythm guitarist, he helped pioneer grunge. The band's experimentation with odd time signatures and alternate tunings set them apart from peers. Cornell later fronted Audioslave, combining his vocals with RATM's musicians. His solo career and Temple of the Dog collaboration (with Pearl Jam members) expanded his legacy. Cornell's suicide in 2017 shocked the music world. His voice remains instantly recognizable and irreplaceable.",
+      "gear_notes": "Cornell used numerous alternate tunings, most famously tuning all six strings to E for 'Pretty Noose' (reportedly after a joke from Pearl Jam's Jeff Ament). Soundgarden's catalog requires multiple guitars in different tunings. Cornell's rhythm playing supported Kim Thayil's lead work while he focused on vocals. The band's dark, heavy sound came partly from dropped tunings combined with unusual chord voicings. Cornell's acoustic work showcased his songwriting outside the heavy context. His live performances required careful guitar organization to handle the variety of tunings.",
+      "sources": [
+        "https://www.guitarworld.com/artists/guitarists/kim-thayil-on-the-time-chris-cornell-tuned-all-his-guitar-strings-to-e",
+        "https://www.premierguitar.com/rig-rundown-soundgardens-kim-thayil-chris-cornell-and-ben-shepherd",
+        "https://www.scribd.com/doc/296053855/Soundgarden-Tunings"
+      ]
+    },
+    {
+      "name": "J Mascis",
+      "band": "Dinosaur Jr",
+      "primary_tunings": ["E Standard"],
+      "string_brand": "D'Addario (or equivalent)",
+      "string_gauge": ".010-.046",
+      "popular_songs": [
+        {"song": "Freak Scene", "tuning": "E Standard"},
+        {"song": "Feel the Pain", "tuning": "E Standard"},
+        {"song": "Start Choppin", "tuning": "E Standard"},
+        {"song": "The Wagon", "tuning": "E Standard"},
+        {"song": "Little Fury Things", "tuning": "E Standard"},
+        {"song": "Out There", "tuning": "E Standard"},
+        {"song": "Just Like Heaven", "tuning": "E Standard"},
+        {"song": "Get Me", "tuning": "E Standard"}
+      ],
+      "bio": "Joseph Donald Mascis Jr. (born 1965) pioneered the loud-quiet-loud dynamic that influenced Nirvana and countless others. Dinosaur Jr's combination of Neil Young-inspired solos, punk energy, and noise-pop melody was hugely influential. Mascis's extreme volume - reportedly the loudest band in rock - became their trademark. His languid vocal delivery contrasts with aggressive guitar work. After the band's breakup in 1997, Mascis pursued solo work and reformed Dinosaur Jr in 2005. His playing combines blues-based soloing with walls of feedback and fuzz, created through stacked amplifiers at crushing volumes.",
+      "gear_notes": "Mascis uses standard E tuning and medium gauge strings - his signature sound comes from volume and effects, not alternate setups. His Jazzmaster guitars (now a Squier signature model) feature the offset body and floating tremolo that contributes to his surfy-yet-heavy tone. Mascis runs multiple amplifiers simultaneously, creating his famous wall of sound. His pedalboard features numerous fuzz and distortion pedals layered together. The standard tuning and gauges prove that extreme sounds can come from conventional setups when combined with high volume and creative playing.",
+      "sources": [
+        "https://www.fender.com/articles/fender-performances/j-mascis",
+        "https://www.thomann.de/intl/squier_j_mascis_jazzmaster.htm",
+        "https://www.sweetwater.com/store/detail/JazzMstIJM--squier-j-mascis-signature-jazzmaster-vintage-white-with-indian-laurel-fingerboard"
+      ]
+    },
+    {
+      "name": "Kim Thayil",
+      "band": "Soundgarden",
+      "primary_tunings": ["Drop D", "Various alternate tunings (8+ different tunings per album)"],
+      "string_brand": "GHS",
+      "string_gauge": ".009-.046 (heavier strings for lower tunings)",
+      "popular_songs": [
+        {"song": "Jesus Christ Pose", "tuning": "Drop D"},
+        {"song": "4th of July", "tuning": "CGCGGE"},
+        {"song": "Limo Wreck", "tuning": "EEBBBB"},
+        {"song": "Head Down", "tuning": "CGDGGC"},
+        {"song": "Mailman", "tuning": "BADGBE"},
+        {"song": "Fell on Black Days", "tuning": "DADGBE"},
+        {"song": "Black Hole Sun", "tuning": "Drop D"},
+        {"song": "Boot Camp", "tuning": "CGCGGE"}
+      ],
+      "bio": "Kim Anand Thayil (born 1960) brought an experimental approach to heavy metal guitar that influenced countless alternative and metal guitarists. As Soundgarden's lead guitarist, he explored unconventional tunings, dissonant harmonies, and feedback as compositional elements. His style combined Black Sabbath heaviness with punk attitude and art-rock intellectualism. Thayil's trademark Guild and Gibson SG guitars through Marshall amplifiers created Soundgarden's thick, churning guitar tone. He was often criticized by purists for his 'sloppy' style, but his unpredictable playing added to Soundgarden's unsettling atmosphere.",
+      "gear_notes": "Thayil used approximately eight different tunings on Superunknown alone, requiring multiple guitars at shows. His approach to alternate tunings was to 'throw patterns and scales out the window' and find new voicings. The band embraced Drop D before it became ubiquitous in metal, and Thayil defended the tuning against purists who called it 'cheating.' His Guild S-100 guitars became associated with his sound. For lower tunings, he uses heavier gauge strings to maintain tension. Thayil's intentionally loose approach to playing - letting notes buzz and sustain unpredictably - contributed to Soundgarden's dark atmosphere.",
+      "sources": [
+        "https://www.premierguitar.com/rig-rundown-soundgardens-kim-thayil-chris-cornell-and-ben-shepherd",
+        "https://www.guitarworld.com/features/interview-soundgardens-kim-thayil-alternate-tunings-king-animal-and-more",
+        "https://www.ultimate-guitar.com/news/general_music_news/kim_thayil_names_one_thing_guitarists_get_wrong_with_soundgarden_songs_i_know_some_people_took_offense_at_that.html"
+      ]
+    },
+    {
+      "name": "Thurston Moore",
+      "band": "Sonic Youth",
+      "primary_tunings": ["Numerous alternate tunings (30+)", "F#F#F#F#EB", "GABDEG", "DD#A#D#GG"],
+      "string_brand": "Various (often used two identical strings for 5th and 6th positions)",
+      "string_gauge": "Variable (often used A strings for both low strings)",
+      "popular_songs": [
+        {"song": "Teenage Riot", "tuning": "GABDEG"},
+        {"song": "Kool Thing", "tuning": "F#F#F#F#EB"},
+        {"song": "100%", "tuning": "F#F#F#F#EB"},
+        {"song": "Incinerate", "tuning": "DD#A#D#GG"},
+        {"song": "Bull in the Heather", "tuning": "GGDDDD"},
+        {"song": "Silver Rocket", "tuning": "F#F#GGAA"},
+        {"song": "Schizophrenia", "tuning": "F#F#F#F#EB"},
+        {"song": "Sunday", "tuning": "CGDGCD"}
+      ],
+      "bio": "Thurston Joseph Moore (born 1958) co-founded Sonic Youth in 1981 with Lee Ranaldo and Kim Gordon, pioneering noise rock and alternative guitar approaches. Sonic Youth's use of altered tunings, prepared guitars (objects inserted between strings), and controlled feedback created a new guitar vocabulary. Moore's approach rejected traditional technique in favor of texture, atmosphere, and noise as musical elements. The band influenced virtually every alternative act that followed. After Sonic Youth's dissolution in 2011, Moore continued solo work and collaborations. His intellectual approach to guitar expanded what the instrument could express.",
+      "gear_notes": "Sonic Youth maintained a fleet of guitars, each permanently in different tunings - retuning between songs was impractical given their extreme variations. Moore often used two identical gauge strings (like two A strings) for the bottom two positions to accommodate his unison tunings. His F#F#F#F#EB tuning became a staple across multiple albums. The band used screwdrivers, drumsticks, and other objects between strings to create prepared guitar sounds. Moore's approach required understanding that traditional scales and patterns don't apply - you must discover new shapes for each tuning. Their Fender Jazzmasters became associated with the Sonic Youth sound.",
+      "sources": [
+        "http://www.sonicyouth.com/mustang/tab/tuninglist.html",
+        "https://stringjoy.com/sonic-youth-alternate-tunings/",
+        "https://www.guitarworld.com/artists/guitarists/how-and-why-thurston-moore-started-using-alternative-tunings"
+      ]
+    }
+  ],
+  "metal": [
+    {
+      "name": "James Hetfield",
+      "band": "Metallica",
+      "primary_tunings": ["E Standard", "Eb Standard", "D Standard", "Drop D"],
+      "string_brand": "Ernie Ball (Papa Het's Hardwired Master Cores)",
+      "string_gauge": ".011, .014, .018p, .028, .038, .050 (Signature set)",
+      "popular_songs": [
+        {"song": "Master of Puppets", "tuning": "E Standard"},
+        {"song": "Enter Sandman", "tuning": "E Standard"},
+        {"song": "One", "tuning": "E Standard"},
+        {"song": "Fade to Black", "tuning": "E Standard"},
+        {"song": "Battery", "tuning": "E Standard"},
+        {"song": "The God That Failed", "tuning": "Eb Standard"},
+        {"song": "Sad But True", "tuning": "D Standard"},
+        {"song": "All Nightmare Long", "tuning": "Drop D"},
+        {"song": "Nothing Else Matters", "tuning": "E Standard"}
+      ],
+      "bio": "James Alan Hetfield (born 1963) is the rhythm guitarist, co-founder, and lead vocalist of Metallica, the best-selling thrash metal band of all time. His right-hand downpicking technique became the template for metal rhythm guitar. Hetfield's riffs on albums like Master of Puppets and Ride the Lightning defined the thrash metal sound. Beyond metal, his songwriting encompasses ballads, country influences, and progressive elements. Metallica has sold over 125 million albums worldwide. Hetfield has battled addiction publicly, becoming an advocate for recovery. His precision and aggression set the standard for metal rhythm playing.",
+      "gear_notes": "Hetfield's signature string set (.011-.050) was developed over a decade with Ernie Ball, using thicker core wire for stability under aggressive downpicking. He typically uses medium gauge strings for standard tuning, going heavier for dropped tunings. His ESP/LTD signature guitars feature EMG pickups for high output. Hetfield's legendary downpicking endurance comes from years of practice - he rarely alternate picks rhythm parts. The 'black album' era saw Metallica begin experimenting with lower tunings. His Mesa Boogie amplifiers (and now his own signature Mesa heads) define the modern metal tone.",
+      "sources": [
+        "https://www.ernieball.com/guitar-strings/electric-guitar-strings/papa-hets-signature-guitar-strings",
+        "https://www.stringsandbeyond.com/blog/the-guitar-strings-used-by-metallica/",
+        "https://www.guitarworld.com/news/james-hetfield-ernie-ball-signature-strings"
+      ]
+    },
+    {
+      "name": "Kirk Hammett",
+      "band": "Metallica",
+      "primary_tunings": ["E Standard", "Eb Standard", "D Standard"],
+      "string_brand": "Ernie Ball (Hybrid custom set)",
+      "string_gauge": ".009, .011, .016, .026, .036, .048 (Hybrid: light top, heavy bottom)",
+      "popular_songs": [
+        {"song": "One (Solo)", "tuning": "E Standard"},
+        {"song": "Enter Sandman (Solo)", "tuning": "E Standard"},
+        {"song": "Fade to Black (Solo)", "tuning": "E Standard"},
+        {"song": "Master of Puppets (Solo)", "tuning": "E Standard"},
+        {"song": "The Unforgiven (Solo)", "tuning": "E Standard"},
+        {"song": "Nothing Else Matters (Solo)", "tuning": "E Standard"},
+        {"song": "Creeping Death (Solo)", "tuning": "E Standard"},
+        {"song": "Seek & Destroy (Solo)", "tuning": "E Standard"}
+      ],
+      "bio": "Kirk Lee Hammett (born 1962) joined Metallica in 1983, replacing Dave Mustaine. A student of Joe Satriani, Hammett brought technical proficiency and blues influence to thrash metal soloing. His wah-drenched leads became a Metallica signature. Hammett's playing bridges the gap between pentatonic blues-rock and neoclassical shred. Beyond Metallica, he's an avid horror memorabilia collector and authored a book on his collection. His signature ESP and Gibson guitars feature his characteristic design elements. Hammett continues to evolve, incorporating more classical and jazz influences in recent work.",
+      "gear_notes": "Hammett uses a hybrid string set - light (.009) on top for easy bending during solos, heavier bottom strings (.048) to match Hetfield's rhythm attack. The top three strings come from a Super Slinky set, bottom three from a heavier set. As a lead player, Hammett needs flexibility for bends while maintaining enough tension for aggressive picking. His wah pedal is always on during solos - it's essentially part of his tone. The EMG pickups in his guitars provide consistent output regardless of string gauge. When Metallica tunes to C#, Hammett uses slightly heavier 9-42 sets.",
+      "sources": [
+        "https://www.ernieball.com/stringtheory/kirk-hammett",
+        "https://www.guitarworld.com/gear/kirk-hammett-five-things-we-learned-his-ernie-ball-string-theory-clip",
+        "https://www.stringsdirect.co.uk/blogs/blog/player-spotlight-kirk-hammett"
+      ]
+    },
+    {
+      "name": "Tony Iommi",
+      "band": "Black Sabbath",
+      "primary_tunings": ["E Standard (early)", "D# Standard", "C# Standard"],
+      "string_brand": "La Bella (Signature Series)",
+      "string_gauge": ".008, .008, .011, .018w, .024, .032 (D# tuning), .009, .010, .012, .020w, .032, .042 (C# tuning)",
+      "popular_songs": [
+        {"song": "Iron Man", "tuning": "E Standard (early), later C#"},
+        {"song": "Paranoid", "tuning": "E Standard"},
+        {"song": "War Pigs", "tuning": "E Standard"},
+        {"song": "Black Sabbath", "tuning": "E Standard (tritone riff)"},
+        {"song": "N.I.B.", "tuning": "E Standard"},
+        {"song": "Sweet Leaf", "tuning": "C# Standard"},
+        {"song": "Children of the Grave", "tuning": "C# Standard"},
+        {"song": "Into the Void", "tuning": "C# Standard"},
+        {"song": "Symptom of the Universe", "tuning": "C# Standard"}
+      ],
+      "bio": "Anthony Frank Iommi (born 1948) is the godfather of heavy metal guitar. After losing the tips of two fingers in an industrial accident at age 17, he nearly quit guitar. Instead, he created thimble-like prosthetics and adjusted his technique, inadvertently developing the heavy, detuned sound that became metal. Black Sabbath's first albums invented the heavy metal genre. Iommi's tritone-laden riffs on songs like 'Black Sabbath' and 'Symptom of the Universe' influenced every metal guitarist who followed. Despite numerous lineup changes, Iommi remained Sabbath's constant. He was knighted in 2025.",
+      "gear_notes": "Iommi's fingertip injury forced two innovations: light gauge strings (to reduce fingertip pressure) and down-tuning (to lower tension further). His banjo-light string gauges (.008-.032 for D# tuning) would be impossibly floppy for most players, but combined with his detuning, they feel playable. The lighter touch required by his injury contributed to Sabbath's dark, sustained tone. His Gibson SG became synonymous with doom metal. Iommi's La Bella signature strings replicate his exact unusual gauges. His technique compensates for the light strings through precise picking and amp saturation.",
+      "sources": [
+        "https://stringjoy.com/tony-iommis-guitar-string-gauges/",
+        "https://www.labella.com/artists/tony-iommi/",
+        "https://www.guitarguitar.co.uk/news/142375/"
+      ]
+    },
+    {
+      "name": "Dimebag Darrell",
+      "band": "Pantera",
+      "primary_tunings": ["D Standard (Quarter-step down from E)", "C# Standard", "Drop B"],
+      "string_brand": "DR Strings (Hi-Voltage Signature Series)",
+      "string_gauge": ".009-.042 (Standard), .009-.046 (Drop D), .009-.050 (D Standard), .011-.050 (C#)",
+      "popular_songs": [
+        {"song": "Walk", "tuning": "D Standard"},
+        {"song": "Cowboys from Hell", "tuning": "E Standard (quarter-step down)"},
+        {"song": "Cemetery Gates", "tuning": "D Standard"},
+        {"song": "Mouth for War", "tuning": "D Standard"},
+        {"song": "5 Minutes Alone", "tuning": "D Standard"},
+        {"song": "Domination", "tuning": "D Standard"},
+        {"song": "I'm Broken", "tuning": "C# Standard"},
+        {"song": "Floods", "tuning": "D Standard"}
+      ],
+      "bio": "Darrell Lance Abbott (1966-2004) transformed metal guitar with Pantera's groove metal sound. His combination of heavy riffs, wild harmonics, and blues-influenced solos created a new template for extreme guitar. 'Dimebag' earned his nickname from selling marijuana for a dime. His signature squealing harmonics and dive-bomb techniques became widely imitated. After Pantera's breakup, he formed Damageplan. Tragically, Dimebag was shot and killed onstage in 2004 by a deranged fan. His influence on metal is incalculable - virtually every modern metal guitarist shows his influence. He's consistently voted among the greatest metal guitarists ever.",
+      "gear_notes": "Dimebag's tuning was unique - quarter-step down from standard (between E and Eb) on early albums, progressing to D standard and lower. He used surprisingly light strings (.009-.042 for standard, .009-.046 for dropped D) considering his heavy sound. His Dean ML guitars featured Floyd Rose tremolos essential for his dive-bomb squeals. The DR Hi-Voltage signature strings are treated for extended life. Dimebag's tone came primarily from his Randall amplifiers and Furman parametric EQ, which he used to sculpt his distinctive cutting midrange. His ability to make light strings sound massive influenced many players.",
+      "sources": [
+        "https://www.reddit.com/r/Guitar/comments/89ocp3/question_dimebags_strings_in_damageplan/",
+        "https://www.sweetwater.com/insync/picking-the-right-string-gauges-for-detuned-axes/",
+        "https://www.drstrings.com/product-page/dimebag-darrell-pantera"
+      ]
+    },
+    {
+      "name": "Randy Rhoads",
+      "primary_tunings": ["E Standard"],
+      "string_brand": "Various (no signature set - died before string endorsements were common)",
+      "string_gauge": ".009-.042 or .010-.046",
+      "popular_songs": [
+        {"song": "Crazy Train", "tuning": "E Standard"},
+        {"song": "Mr. Crowley", "tuning": "E Standard"},
+        {"song": "Dee", "tuning": "E Standard (Classical)"},
+        {"song": "Flying High Again", "tuning": "E Standard"},
+        {"song": "Over the Mountain", "tuning": "E Standard"},
+        {"song": "Revelation (Mother Earth)", "tuning": "E Standard"},
+        {"song": "S.A.T.O.", "tuning": "E Standard"},
+        {"song": "Diary of a Madman", "tuning": "E Standard"}
+      ],
+      "bio": "Randall William Rhoads (1956-1982) merged classical music with heavy metal in ways that permanently changed guitar. Joining Ozzy Osbourne's solo band at 23, he recorded two landmark albums before dying in a plane crash at 25. Rhoads was classically trained and continued taking lessons throughout his career, incorporating baroque and classical concepts into metal. His harmonic approach, technical precision, and compositional sophistication elevated metal guitar beyond blues-based pentatonics. The brief glimpse of his potential makes his loss even more poignant. He influenced the neoclassical metal movement that followed.",
+      "gear_notes": "Rhoads used standard E tuning exclusively - his heavy sound came from technique and amplification, not detuning. He played Jackson guitars (the Randy Rhoads model was one of the first signature guitars) through Marshall amplifiers. His string gauges were moderate (.009-.042 or .010-.046), prioritizing playability for his classical-influenced runs. Rhoads' precise technique required consistent string tension and action. His vibrato was wide and controlled, influenced by classical violin technique. The white Jackson V and offset V designs became iconic in metal. He practiced relentlessly, even during tours.",
+      "sources": [
+        "https://www.jeffperrinmusic.com/blog/string-gauges-of-50-legendary-guitar-players/",
+        "https://www.guitarguitar.co.uk/news/142212/",
+        "https://equipboard.com/pros/randy-rhoads"
+      ]
+    },
+    {
+      "name": "Zakk Wylde",
+      "primary_tunings": ["Eb Standard", "Drop Db", "D Standard", "Drop A"],
+      "string_brand": "Dunlop (String Lab), GHS Boomers (Signature)",
+      "string_gauge": ".010-.060 (heavy), .011-.070 (extra heavy for extreme drop tunings)",
+      "popular_songs": [
+        {"song": "No More Tears", "tuning": "D Standard (Ozzy)"},
+        {"song": "Mama, I'm Coming Home", "tuning": "E Standard (Ozzy)"},
+        {"song": "Fire It Up", "tuning": "Drop Db (BLS)"},
+        {"song": "Stillborn", "tuning": "Drop Db (BLS)"},
+        {"song": "In This River", "tuning": "E Standard (BLS)"},
+        {"song": "Suicide Messiah", "tuning": "Drop Db (BLS)"},
+        {"song": "Miracle Man", "tuning": "Eb Standard (Ozzy)"},
+        {"song": "Concrete Jungle", "tuning": "Drop Db (BLS)"}
+      ],
+      "bio": "Jeffery Phillip Wielandt (born 1967), known as Zakk Wylde, became Ozzy Osbourne's guitarist at 19, a position he held for most of three decades. His aggressive style combines pinch harmonics, wide vibrato, and classical-influenced patterns. Black Label Society, his own band, channels Southern rock and metal. Wylde's work ethic and practice routine are legendary - he still practices scales for hours daily. His signature bullseye Gibson Les Paul design became one of metal's most recognizable guitars. Beyond metal, he's a skilled pianist and has explored country music. Wylde remains one of metal's most consistent and influential players.",
+      "gear_notes": "Wylde uses heavy gauge strings (.010-.060 typically) for his down-tuned work, going even heavier (.011-.070) for extreme drop tunings. His signature Dunlop and GHS strings are designed for stability in dropped tunings. The EMG pickups in his signature Les Pauls handle the heavy strings without muddiness. Wylde's picking attack is extremely aggressive, requiring durable strings. His use of the wah pedal (often leaving it in a fixed position for a midrange boost) contributes to his cutting tone. The heavy bottom strings maintain definition even in drop A tuning.",
+      "sources": [
+        "https://stringjoy.com/zakk-wyldes-guitar-string-gauges/",
+        "https://www.jimdunlop.com/zakk-wylde-string-lab-electric-guitar-strings-10-60/",
+        "https://www.ghsstrings.com/products/10914-zakk-wylde-signature"
+      ]
+    },
+    {
+      "name": "Dave Mustaine",
+      "band": "Megadeth",
+      "primary_tunings": ["E Standard", "Eb Standard", "D Standard"],
+      "string_brand": "Gibson (Signature), GHS Progressives, Cleartone",
+      "string_gauge": ".010-.052 (Signature set)",
+      "popular_songs": [
+        {"song": "Holy Wars...The Punishment Due", "tuning": "E Standard"},
+        {"song": "Symphony of Destruction", "tuning": "Eb Standard"},
+        {"song": "Hangar 18", "tuning": "E Standard"},
+        {"song": "Peace Sells", "tuning": "E Standard"},
+        {"song": "Tornado of Souls", "tuning": "E Standard"},
+        {"song": "Sweating Bullets", "tuning": "Eb Standard"},
+        {"song": "A Tout le Monde", "tuning": "Eb Standard"},
+        {"song": "Trust", "tuning": "Eb Standard"}
+      ],
+      "bio": "David Scott Mustaine (born 1961) co-founded Metallica before being fired for substance abuse in 1983. He channeled his anger into Megadeth, arguably thrash metal's most technically proficient band. His intricate riffing and complex arrangements pushed metal's boundaries. Despite hand injuries that nearly ended his career in 2002, Mustaine returned to form. Megadeth has sold over 50 million albums. His rivalry with Metallica fueled both bands' competitive excellence. Mustaine's playing combines speed, complexity, and aggression. He became a born-again Christian in 2002, though Megadeth's music remained heavy.",
+      "gear_notes": "Mustaine uses a .010-.052 gauge set - heavier than typical for his predominantly standard tuning work. His signature strings emphasize the heavier bottom end for tight rhythm playing while maintaining bendability on top. He's worked with multiple string companies (GHS, Cleartone, Gibson) on signature sets. His Jackson and Dean signature guitars feature his preferred specifications. Mustaine's downpicking is nearly as legendary as Hetfield's, requiring durable strings. The heavier gauges contribute to Megadeth's precise, articulate tone that contrasts with thrashier, sloppier approaches.",
+      "sources": [
+        "https://www.stringsandbeyond.com/blog/the-secret-behind-legends-tones-iconic-guitarists-and-their-string-choices/",
+        "https://www.gibson.com/products/gibson-dave-mustaine-electric-guitar-string-set-signature-gauge",
+        "https://www.groundguitar.com/dave-mustaine-guitars-and-gear/"
+      ]
+    },
+    {
+      "name": "Kerry King",
+      "band": "Slayer",
+      "primary_tunings": ["Eb Standard", "C# Standard", "Drop D"],
+      "string_brand": "Dunlop (Icon Series)",
+      "string_gauge": ".009-.042 (D#), .010-.046 (C#), + .052 for drop tuning",
+      "popular_songs": [
+        {"song": "Raining Blood", "tuning": "Eb Standard"},
+        {"song": "Angel of Death", "tuning": "E Standard"},
+        {"song": "South of Heaven", "tuning": "Eb Standard"},
+        {"song": "Seasons in the Abyss", "tuning": "Eb Standard"},
+        {"song": "War Ensemble", "tuning": "Eb Standard"},
+        {"song": "Dead Skin Mask", "tuning": "Eb Standard"},
+        {"song": "Mandatory Suicide", "tuning": "Eb Standard"},
+        {"song": "Postmortem", "tuning": "E Standard"}
+      ],
+      "bio": "Kerry Ray King (born 1964) is Slayer's co-lead guitarist, known for his aggressive rhythm playing and chaotic, atonal solos. Slayer's extreme speed and dark themes made them one of thrash's 'Big Four' alongside Metallica, Megadeth, and Anthrax. King's playing prioritizes intensity over technical precision - his solos are intentionally dissonant and violent-sounding. His tribal tattoos and imposing stage presence made him a metal icon. Slayer disbanded in 2019 after a farewell tour. King has launched a solo project continuing his extreme metal vision. His influence on death metal and extreme music is significant.",
+      "gear_notes": "King uses lighter gauge strings than his heavy sound might suggest - .009-.042 for D# standard, .010-.046 for C# - relying on amplification and technique for heaviness. His signature Dunlop sets include an additional .052 string for drop tuning situations. The lighter gauges allow for the extremely fast picking that defines Slayer's sound. His B.C. Rich signature guitars feature EMG pickups. King's setup prioritizes playability and speed over string tension. His Marshall amplifiers provide the classic thrash distortion. Slayer's guitar tone comes from doubled rhythm tracks panned hard left and right.",
+      "sources": [
+        "https://www.jimdunlop.com/kerry-king-artist-selected-guitar-strings-10-52/",
+        "https://www.stringsdirect.co.uk/blogs/blog/kerry-king",
+        "https://equipboard.com/pros/kerry-king"
+      ]
+    },
+    {
+      "name": "Adam Jones",
+      "band": "Tool",
+      "primary_tunings": ["Drop D", "Drop B"],
+      "string_brand": "Ernie Ball Skinny Top Heavy Bottom",
+      "string_gauge": ".010-.052",
+      "popular_songs": [
+        {"song": "Schism", "tuning": "Drop D"},
+        {"song": "Lateralus", "tuning": "Drop D"},
+        {"song": "Sober", "tuning": "Drop D"},
+        {"song": "Forty Six & 2", "tuning": "Drop D"},
+        {"song": "Stinkfist", "tuning": "Drop D"},
+        {"song": "Aenima", "tuning": "Drop D"},
+        {"song": "The Pot", "tuning": "Drop D"},
+        {"song": "Vicarious", "tuning": "Drop D"},
+        {"song": "Fear Inoculum", "tuning": "Drop D"},
+        {"song": "7empest", "tuning": "Drop B"}
+      ],
+      "bio": "Adam Thomas Jones (born 1965) creates Tool's dense, hypnotic guitar layers. Originally a special effects artist in Hollywood (working on Jurassic Park and other films), Jones brings a visual artist's sensibility to his compositions. Tool's music features complex polyrhythms, odd time signatures, and progressive structures. Jones' playing is restrained compared to typical metal virtuosos - his parts are compositional, serving the song rather than showcasing technique. Tool has sold over 13 million albums in the US alone. Their releases are rare and meticulously crafted, with Fear Inoculum (2019) arriving 13 years after their previous album.",
+      "gear_notes": "Jones plays almost exclusively in Drop D, making it essentially his 'standard' tuning. His .010-.052 strings (Ernie Ball Skinny Top Heavy Bottom) provide flexibility on top and stability on bottom for the dropped sixth string. Recent Tool material ('7empest') uses Drop B, requiring even heavier bottom strings. Jones' Gibson Les Paul Custom and signature models through Diezel and Marshall amplifiers create Tool's thick, sustained tone. His approach emphasizes precision and composition over flash - every note is deliberate. The heavy bottom string maintains clarity in Tool's bass-heavy mix.",
+      "sources": [
+        "https://www.guitarguitar.co.uk/news/142408/",
+        "https://www.guitarworld.com/lessons/artist-lessons/adam-jones-drop-d-riffs",
+        "https://www.uberproaudio.com/who-plays-what/141-tools-adam-jones-guitar-gear-rig-and-equipment"
+      ]
+    },
+    {
+      "name": "John Petrucci",
+      "band": "Dream Theater",
+      "primary_tunings": ["E Standard (6-string)", "B Standard (7-string)", "Various extended range"],
+      "string_brand": "Ernie Ball (Custom gauges)",
+      "string_gauge": ".010, .012, .016, .024, .036, .046 (6-string), .009-.056 (7-string)",
+      "popular_songs": [
+        {"song": "Pull Me Under", "tuning": "E Standard"},
+        {"song": "Metropolis Pt. 1", "tuning": "E Standard"},
+        {"song": "The Spirit Carries On", "tuning": "E Standard"},
+        {"song": "Panic Attack", "tuning": "Drop D (6-string)"},
+        {"song": "The Glass Prison", "tuning": "B Standard (7-string)"},
+        {"song": "Stream of Consciousness", "tuning": "E Standard"},
+        {"song": "In the Name of God", "tuning": "Drop A (7-string)"},
+        {"song": "The Dance of Eternity", "tuning": "E Standard"},
+        {"song": "Fatal Tragedy", "tuning": "E Standard"}
+      ],
+      "bio": "John Peter Petrucci (born 1967) is Dream Theater's founder and guitarist, widely considered one of the most technically accomplished rock guitarists ever. His playing spans metal, progressive rock, and jazz fusion with equal facility. Petrucci co-founded the Berklee-spawned Dream Theater in 1985, and the band has led progressive metal ever since. His signature Music Man guitars and Mesa Boogie amplifiers became industry standards. Beyond Dream Theater, Petrucci has released solo albums, collaborated with Joe Satriani, and teaches through instructional materials. His work ethic and continuous improvement are legendary in guitar circles.",
+      "gear_notes": "Petrucci's custom string gauges vary depending on the guitar - his 6-strings use .010-.046 with a heavier wound G (.024), while his 7-strings use .009-.056. The heavier wound G string improves intonation for his precise playing. He changes string gauges throughout tours as his fingers toughen. His Music Man Majesty guitars feature floating tremolos requiring careful string tension balance. Petrucci's technique demands consistent response - he practices scales and exercises for hours daily even after decades of professional playing. His signature Ernie Ball strings are available in his exact specifications.",
+      "sources": [
+        "https://www.reddit.com/r/Dreamtheater/comments/1jt6x1o/jps_strings/",
+        "https://www.premierguitar.com/gear/rig-rundown-dream-theaters-john-petrucci",
+        "https://johnpetrucci.com/gear/picks-strings/"
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_date": "2026-01-21",
+    "total_artists": 30,
+    "categories": ["classic_rock", "grunge_alt_rock", "metal"],
+    "data_sources": ["SearXNG local instance", "Official artist websites", "Guitar equipment databases", "Music publication interviews"],
+    "notes": "String gauges and tunings may vary throughout artists' careers. Information represents commonly documented setups. Some artists use multiple guitars with different setups for different songs/tunings."
+  }
+}

@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getMessages } from '@/i18n/utils';
+import { TuningForkPageIsland } from '@/components/pages/TuningForkPageIsland';
+
+const locale = 'en' as const;
+const messages = getMessages(locale);
+---
+<BaseLayout title="Online Tuning Fork - A440Hz | TuningFork" locale={locale}>
+  <TuningForkPageIsland client:load locale={locale} messages={messages} />
+</BaseLayout>

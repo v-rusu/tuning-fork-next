@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { instruments } from '@/lib/data/instruments';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  return locales.flatMap((locale) =>
+    instruments.flatMap((i) =>
+      i.tunings.map((t) => ({
+        params: { locale, instrument: i.slug, tuning: t.slug },
+      }))
+    )
+  );
+};
+
+const { locale, instrument, tuning } = Astro.params;
+return Astro.redirect(`/${locale}/tools/tuner/${instrument}/${tuning}`, 301);
+---

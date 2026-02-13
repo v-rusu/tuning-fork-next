@@ -1,0 +1,10 @@
+---
+import { instruments } from '@/lib/data/instruments';
+
+export function getStaticPaths() {
+  return instruments.map((i) => ({ params: { instrument: i.slug } }));
+}
+
+const { instrument } = Astro.params;
+return Astro.redirect(`/tools/tuner/${instrument}`, 301);
+---

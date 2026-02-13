@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, getMessages } from '@/i18n/utils';
+import { TuningForkPageIsland } from '@/components/pages/TuningForkPageIsland';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { locale: 'es' } },
+    { params: { locale: 'de' } },
+    { params: { locale: 'fr' } },
+  ];
+};
+
+const locale = Astro.params.locale as Locale;
+const messages = getMessages(locale);
+---
+<BaseLayout title="Online Tuning Fork - A440Hz | TuningFork" locale={locale}>
+  <TuningForkPageIsland client:load locale={locale} messages={messages} />
+</BaseLayout>

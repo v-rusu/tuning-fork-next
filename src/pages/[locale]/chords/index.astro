@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { locale: 'es' } },
+    { params: { locale: 'de' } },
+    { params: { locale: 'fr' } },
+  ];
+};
+
+const { locale } = Astro.params;
+return Astro.redirect(`/${locale}/tools/chords`, 301);
+---

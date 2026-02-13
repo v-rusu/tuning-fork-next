@@ -1,0 +1,55 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '../styles/globals.css';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import type { Locale } from '@/i18n/utils';
+import { getMessages } from '@/i18n/utils';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale: Locale;
+  ogTitle?: string;
+  ogDescription?: string;
+}
+
+const { title, description, locale, ogTitle, ogDescription } = Astro.props;
+const messages = getMessages(locale);
+---
+
+<!doctype html>
+<html lang={locale} style="background-color: #111111;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111111" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {ogTitle && <meta property="og:title" content={ogTitle} />}
+    {ogDescription && <meta property="og:description" content={ogDescription} />}
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body class="font-sans antialiased bg-tuner-background">
+    <div class="flex flex-col min-h-screen">
+      <Header
+        client:load
+        locale={locale}
+        messages={{ nav: messages.nav }}
+      />
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer
+        client:load
+        locale={locale}
+        messages={{ footer: messages.footer }}
+      />
+    </div>
+  </body>
+</html>

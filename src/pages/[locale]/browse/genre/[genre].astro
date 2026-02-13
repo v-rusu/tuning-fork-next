@@ -1,0 +1,96 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, useTranslations, getLocalizedPath } from '@/i18n/utils';
+import { getArtistsByGenre } from '@/lib/data/artists';
+import { genres, getGenreBySlug } from '@/lib/data/genres';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['es', 'de', 'fr'] as const;
+  return locales.flatMap((locale) =>
+    genres.map((g) => ({ params: { locale, genre: g.slug } }))
+  );
+};
+
+const locale = Astro.params.locale as Locale;
+const t = useTranslations(locale, 'browse');
+const tArtists = useTranslations(locale, 'artists');
+
+const { genre: genreSlug } = Astro.params;
+const genre = getGenreBySlug(genreSlug);
+
+if (!genre) {
+  return Astro.redirect('/404');
+}
+
+const artists = getArtistsByGenre(genre.id);
+const title = `${genre.name} Guitarists - Guitar Setups | TuningFork`;
+const description = t('genreDescription', { genre: genre.name });
+---
+<BaseLayout title={title} description={description} locale={locale}>
+  <div class="container mx-auto px-4 py-6 sm:py-10">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm">
+      <a href={getLocalizedPath('/artists', locale)} class="text-text-secondary hover:text-white">
+        {tArtists('allArtists')}
+      </a>
+      <span class="text-text-secondary mx-2">/</span>
+      <span class="text-white">{genre.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">
+        {genre.name}
+      </h1>
+      <p class="text-text-secondary max-w-xl">
+        {genre.description}
+      </p>
+      <p class="text-sm text-primary-500 mt-2">
+        {tArtists('artistsCount', { count: artists.length })}
+      </p>
+    </header>
+
+    <!-- Artists Grid -->
+    {artists.length === 0 ? (
+      <div class="text-center py-12">
+        <p class="text-text-secondary">No artists found</p>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {artists.map((artist) => {
+          const primaryTuning = artist.primaryAppTuning?.name || artist.primaryTunings[0] || 'Standard';
+          return (
+            <a
+              href={getLocalizedPath(`/artists/${artist.slug}`, locale)}
+              class="group block bg-tuner-card rounded-lg p-4 hover:bg-tuner-faded transition-colors"
+            >
+              <div class="flex flex-col h-full">
+                <h3 class="text-lg font-semibold text-white group-hover:text-primary-500 transition-colors">
+                  {artist.name}
+                </h3>
+                {artist.band && (
+                  <p class="text-sm text-text-secondary mt-0.5">{artist.band}</p>
+                )}
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-primary-500/20 text-primary-400">
+                    {primaryTuning}
+                  </span>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-xs bg-tuner-faded text-text-secondary">
+                    {artist.genre.name}
+                  </span>
+                </div>
+                <p class="mt-3 text-sm text-text-secondary line-clamp-2 flex-grow">
+                  {artist.stringGauge}
+                </p>
+                <div class="mt-3 text-xs text-text-secondary">
+                  {artist.songs.length} songs
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    )}
+  </div>
+</BaseLayout>

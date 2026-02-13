@@ -1,0 +1,83 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import { type Locale, useTranslations, getLocalizedPath } from '@/i18n/utils';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return [
+    { params: { locale: 'es' } },
+    { params: { locale: 'de' } },
+    { params: { locale: 'fr' } },
+  ];
+};
+
+const locale = Astro.params.locale as Locale;
+const t = useTranslations(locale, 'chords');
+const tInstruments = useTranslations(locale, 'instruments');
+
+const chordInstruments = [
+  { id: 'guitar', slug: 'guitar', stringCount: 6 },
+  { id: 'ukulele', slug: 'ukulele', stringCount: 4 },
+];
+---
+<BaseLayout title={`${t('chordLibrary')} | TuningFork`} description={t('chordLibraryDesc')} locale={locale}>
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-2xl sm:text-3xl font-bold text-white text-center mb-2">
+        {t('chordLibrary')}
+      </h1>
+      <p class="text-text-secondary text-center mb-8">
+        {t('chordLibraryDesc')}
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        {chordInstruments.map((instrument) => (
+          <a
+            href={getLocalizedPath(`/tools/chords/${instrument.slug}`, locale)}
+            class="card hover:bg-tuner-faded transition-colors group bg-tuner-card rounded-lg p-6"
+          >
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center group-hover:bg-primary-500/30 transition-colors">
+                <svg class="w-8 h-8 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-white">
+                  {t('title', { instrument: tInstruments(instrument.id) })}
+                </h2>
+                <p class="text-sm text-text-secondary">
+                  {t('viewAllChords', { count: instrument.stringCount })}
+                </p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Popular chords quick links -->
+      <div class="mt-12">
+        <h2 class="text-xl font-semibold text-white mb-4">
+          {t('popularChords')}
+        </h2>
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
+          {['c-major', 'd-major', 'e-major', 'g-major', 'a-major', 'e-minor', 'a-minor', 'd-minor'].map(
+            (chord) => (
+              <a
+                href={getLocalizedPath(`/tools/chords/guitar/${chord}`, locale)}
+                class="p-3 text-center rounded-lg bg-tuner-card text-text-secondary hover:bg-tuner-faded transition-colors"
+              >
+                <span class="block font-medium">
+                  {chord.split('-')[0].toUpperCase()}
+                  {chord.includes('minor') ? 'm' : ''}
+                </span>
+              </a>
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
