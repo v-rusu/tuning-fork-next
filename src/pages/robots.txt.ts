@@ -4,7 +4,7 @@ export const GET: APIRoute = () => {
   const body = `User-agent: *
 Allow: /
 
-Sitemap: https://tuningfork.app/sitemap-index.xml`;
+Sitemap: https://tuningfork.co/sitemap-index.xml`;
 
   return new Response(body, {
     headers: { 'Content-Type': 'text/plain' },
